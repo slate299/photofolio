@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-4">
+    <h1 class="text-center">Photo Gallery</h1>
+    <div class="row">
+        {% for photo in photos %}
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <img src="{{ photo.image.url }}" class="card-img-top" alt="{{ photo.title }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ photo.title }}</h5>
+                    <p class="card-text">{{ photo.description }}</p>
+                    <span class="badge bg-primary">{{ photo.get_category_display }}</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

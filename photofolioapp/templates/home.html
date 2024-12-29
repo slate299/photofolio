@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Home - Wildlife Photography{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
@@ -8,7 +7,7 @@
     <div class="container">
         <h1 class="display-4">Capturing the Wonders of Nature</h1>
         <p class="lead">Specializing in bird and wildlife photography, with a passion for all things beautiful in the wild.</p>
-        <a href="{% url 'gallery' %}" class="btn btn-primary btn-lg">Explore My Work</a>
+        <a href="{% url 'photo_gallery' %}" class="btn btn-primary btn-lg">Explore My Work</a>
     </div>
 </div>
 
@@ -26,17 +25,17 @@
         <div class="col-md-4">
             <h3>Bird Photography</h3>
             <p>Explore stunning images of birds in their natural habitat.</p>
-            <a href="{% url 'gallery' %}?category=birds" class="btn btn-outline-light">View Birds</a>
+            <a href="{% url 'photo_gallery' %}?category=birds" class="btn btn-outline-light">View Birds</a>
         </div>
         <div class="col-md-4">
             <h3>Wildlife Photography</h3>
             <p>Capture the majesty of wildlife with my unique perspective.</p>
-            <a href="{% url 'gallery' %}?category=wildlife" class="btn btn-outline-light">View Wildlife</a>
+            <a href="{% url 'photo_gallery' %}?category=wildlife" class="btn btn-outline-light">View Wildlife</a>
         </div>
         <div class="col-md-4">
             <h3>Other Works</h3>
             <p>From landscapes to events, view my diverse photography portfolio.</p>
-            <a href="{% url 'gallery' %}?category=others" class="btn btn-outline-light">View Other Works</a>
+            <a href="{% url 'photo_gallery' %}?category=others" class="btn btn-outline-light">View Other Works</a>
         </div>
     </div>
 </div>
