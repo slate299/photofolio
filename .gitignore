@@ -1,0 +1,19 @@
+# Ignore .env file containing sensitive info
+.env
+
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore database files
+db.sqlite3
+
+# Ignore virtual environment directory
+.venv/
+
+# Ignore Django migration files
+migrations/
+
+# Ignore log files
+*.log

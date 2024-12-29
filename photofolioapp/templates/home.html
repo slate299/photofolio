@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home - Wildlife Photography{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div id="hero" class="jumbotron jumbotron-fluid text-center text-light" style="background-image: url('{% static 'img/gallery/gallery-13.jpg' %}'); background-size: cover; height: 100vh;">
+    <div class="container">
+        <h1 class="display-4">Capturing the Wonders of Nature</h1>
+        <p class="lead">Specializing in bird and wildlife photography, with a passion for all things beautiful in the wild.</p>
+        <a href="{% url 'gallery' %}" class="btn btn-primary btn-lg">Explore My Work</a>
+    </div>
+</div>
+
+<!-- About Section -->
+<div class="container text-center my-5">
+    <h2>About Me</h2>
+    <p class="lead">I am a passionate photographer dedicated to capturing the beauty of wildlife, especially birds. My mission is to showcase the wonders of nature through my lens.</p>
+    <a href="{% url 'about' %}" class="btn btn-outline-light btn-lg">Learn More</a>
+</div>
+
+<!-- Featured Categories Section -->
+<div class="container text-center my-5">
+    <h2>Featured Categories</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Bird Photography</h3>
+            <p>Explore stunning images of birds in their natural habitat.</p>
+            <a href="{% url 'gallery' %}?category=birds" class="btn btn-outline-light">View Birds</a>
+        </div>
+        <div class="col-md-4">
+            <h3>Wildlife Photography</h3>
+            <p>Capture the majesty of wildlife with my unique perspective.</p>
+            <a href="{% url 'gallery' %}?category=wildlife" class="btn btn-outline-light">View Wildlife</a>
+        </div>
+        <div class="col-md-4">
+            <h3>Other Works</h3>
+            <p>From landscapes to events, view my diverse photography portfolio.</p>
+            <a href="{% url 'gallery' %}?category=others" class="btn btn-outline-light">View Other Works</a>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action Section -->
+<div class="container text-center my-5">
+    <h2>Book a Session</h2>
+    <p>Interested in capturing the beauty of wildlife or having custom shots taken? Reach out to discuss your vision.</p>
+    <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Contact Me</a>
+</div>
+{% endblock %}

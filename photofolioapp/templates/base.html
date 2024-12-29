@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Wildlife Photography{% endblock %}</title>
+
+    <!-- Add Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Link to custom CSS file for additional dark theme styles -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    <!-- Add Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Add favicon (optional) -->
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+</head>
+<body class="bg-dark text-light">
+
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-lg">
+        <div class="container">
+            <!-- Brand/Logo -->
+            <a class="navbar-brand font-weight-bold text-accent" href="{% url 'home' %}">
+                <i class="fas fa-camera"></i> Photographer's Name
+            </a>
+
+            <!-- Toggler Button for Mobile View -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'gallery' %}"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}"><i class="fas fa-user"></i> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'services' %}"><i class="fas fa-cogs"></i> Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-center text-light py-4">
+        <div class="container">
+            <p class="mb-2">&copy; 2024 Desmond Gitonyi. All Rights Reserved.</p>
+            <div>
+                <a href="https://facebook.com/desmond.gitonyi/" class="text-light mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/d_gitonyi/" class="text-light mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/DGitonyi" class="text-light mx-2"><i class="fab fa-twitter"></i></a> <!-- X.com link -->
+                <a href="https://ke.linkedin.com/in/desmond-gitonyi-32b985197" class="text-light mx-2"><i class="fab fa-linkedin"></i></a> <!-- LinkedIn link -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add Bootstrap and jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Me - Wildlife Photography{% endblock %}
+
+{% block content %}
+<!-- Contact Section Header -->
+<div class="container text-center my-5">
+    <h2 class="text-accent">Contact Me</h2>
+    <p class="lead text-muted">Have questions, want to book a session, or just want to say hello? Feel free to reach out!</p>
+</div>
+
+<!-- Contact Information Section -->
+<div class="container my-5">
+    <div class="row">
+        <!-- Contact Info -->
+        <div class="col-md-4 text-center">
+            <h3 class="text-primary">Contact Information</h3>
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:photographer@example.com">photographer@example.com</a></p>
+            <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +123 456 7890</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> City, Country</p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="col-md-4 text-center">
+            <h3 class="text-primary">Social Media</h3>
+            <p>Follow me on social media for the latest updates, behind-the-scenes photos, and more!</p>
+            <div class="d-flex justify-content-center">
+                <a href="https://facebook.com/desmond.gitonyi/" class="btn btn-outline-light mx-2"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="https://instagram.com/d_gitonyi/" class="btn btn-outline-light mx-2"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://x.com/DGitonyi" class="btn btn-outline-light mx-2"><i class="fab fa-twitter"></i> X.com</a> <!-- Updated X.com link -->
+                <a href="https://ke.linkedin.com/in/desmond-gitonyi-32b985197" class="btn btn-outline-light mx-2"><i class="fab fa-linkedin"></i> LinkedIn</a> <!-- LinkedIn link -->
+            </div>
+        </div>
+
+        <!-- Location Map -->
+        <div class="col-md-4">
+            <h3 class="text-primary">Location</h3>
+            <div class="map-container rounded shadow-lg">
+                <iframe src="https://www.google.com/maps/embed?pb=your_location"
+                        width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Form Section -->
+<div class="container my-5">
+    <h3 class="text-center text-accent">Send Me a Message</h3>
+    <form action="{% url 'contact' %}" method="POST" class="mt-4">
+        {% csrf_token %}
+
+        <!-- Name Field -->
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+            <small class="form-text text-muted">Please provide your full name.</small>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+            <small class="form-text text-muted">We'll use this to reply to your message.</small>
+        </div>
+
+        <!-- Subject Field -->
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control" id="subject" name="subject" placeholder="E.g., Inquiry about booking or a photo session" required>
+            <small class="form-text text-muted">Provide a brief summary of your message (e.g., Booking inquiry, Pricing request, Feedback, etc.).</small>
+        </div>
+
+        <!-- Message Field -->
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Type your message here" required></textarea>
+            <small class="form-text text-muted">Feel free to include any additional details or questions.</small>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg mt-3">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

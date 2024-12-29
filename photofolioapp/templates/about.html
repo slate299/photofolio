@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Us - Wildlife Photography{% endblock %}
+
+{% block content %}
+<!-- About Section Header -->
+<div class="container text-center my-5">
+    <h2>About Me</h2>
+    <p class="lead">Capturing the beauty of nature, one shot at a time. Welcome to my world of wildlife photography.</p>
+</div>
+
+<!-- Photographer's Bio -->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{% static 'img/profile-img.jpg' %}" alt="Photographer" class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-6">
+            <h3>Who I Am</h3>
+            <p>I am a professional wildlife photographer with a deep passion for capturing the wonders of nature, especially birds and wildlife. From a young age, I have been fascinated by the natural world, and my photography journey started with a simple desire to share the beauty I see with others.</p>
+            <p>Over the years, I've honed my skills, capturing breathtaking moments in the wild, and I'm now fortunate to do what I love every day.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Photography Philosophy Section -->
+<div class="container text-center my-5">
+    <h3>My Photography Philosophy</h3>
+    <p class="lead">Photography is not just about taking pictures; it’s about telling a story and preserving fleeting moments that would otherwise be lost. My approach focuses on capturing the true essence of nature, from the delicate grace of birds to the raw beauty of wildlife in their natural habitats.</p>
+    <p>Each photo is a chance to transport you into the world of the animal, to experience what I see through my lens, and to evoke a deep connection with nature.</p>
+</div>
+
+<!-- Experience & Achievements Section -->
+<div class="container my-5">
+    <h3>Experience & Achievements</h3>
+    <ul class="list-unstyled">
+        <li><strong>10+ years of experience</strong> capturing wildlife in various continents.</li>
+        <li><strong>Award-winning photographer</strong> recognized for excellence in nature photography.</li>
+        <li><strong>Exhibited at</strong> multiple international photography galleries and nature exhibitions.</li>
+        <li><strong>Featured in</strong> well-known publications like National Geographic, Wildlife Photographer of the Year, etc.</li>
+    </ul>
+</div>
+
+<!-- Call to Action Section -->
+<div class="container text-center my-5">
+    <h3>Let's Capture Nature Together</h3>
+    <p>Interested in working with me? Whether it’s a custom shoot or a wildlife project, I’d love to bring your vision to life.</p>
+    <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Get in Touch</a>
+</div>
+
+{% endblock %}

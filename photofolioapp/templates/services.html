@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Services - Wildlife Photography{% endblock %}
+
+{% block content %}
+<!-- Services Section Header -->
+<div class="container text-center my-5">
+    <h2 class="text-accent">Photography Services</h2>
+    <p class="lead text-muted">I offer a range of professional photography services, specializing in wildlife and bird photography. Whether you're looking for a nature-filled adventure or an event to be captured in stunning detail, I'm here to help!</p>
+</div>
+
+<!-- Photography Services Section -->
+<div class="container my-5">
+    <div class="row">
+        <!-- Service 1: Wildlife Photography -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'img/gallery/gallery-1.jpg' %}" class="card-img-top" alt="Wildlife Photography">
+                <div class="card-body bg-dark bg-opacity-50 text-white">
+                    <h5 class="card-title">Wildlife Photography</h5>
+                    <p class="card-text">Capture stunning moments of wildlife in their natural habitats. From majestic big cats to elusive birds, I can help you preserve these moments in time.</p>
+                    <a href="#contact" class="btn btn-primary">Inquire</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 2: Bird Photography -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'img/gallery/gallery-8-2.jpg' %}" class="card-img-top" alt="Bird Photography">
+                <div class="card-body bg-dark bg-opacity-50 text-white">
+                    <h5 class="card-title">Bird Photography</h5>
+                    <p class="card-text">Specialized in capturing beautiful birds in flight and perched in their natural surroundings. Perfect for nature enthusiasts and birdwatchers.</p>
+                    <a href="#contact" class="btn btn-primary">Inquire</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 3: Nature Photography -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{% static 'img/gallery/gallery-2.jpg' %}" class="card-img-top" alt="Nature Photography">
+                <div class="card-body bg-dark bg-opacity-50 text-white">
+                    <h5 class="card-title">Nature Photography</h5>
+                    <p class="card-text">Photographs of landscapes, forests, mountains, and serene natural vistas. Perfect for those who want to bring the beauty of nature to their space.</p>
+                    <a href="#contact" class="btn btn-primary">Inquire</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pricing and Packages -->
+<div class="container my-5">
+    <h3 class="text-primary">Photography Packages</h3>
+    <div class="row">
+        <!-- Package 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body bg-dark bg-opacity-50 text-white">
+                    <h5 class="card-title">Basic Wildlife Session</h5>
+                    <p class="card-text">1 hour of photography in a local wildlife area. 10 high-resolution images included.</p>
+                    <p class="card-text"><strong>Price: $300</strong></p>
+                    <a href="#contact" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Package 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body bg-dark bg-opacity-50 text-white">
+                    <h5 class="card-title">Full-Day Nature Exploration</h5>
+                    <p class="card-text">A full-day session in a variety of natural environments. 50 high-resolution images included.</p>
+                    <p class="card-text"><strong>Price: $600</strong></p>
+                    <a href="#contact" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body bg-dark bg-opacity-50 text-white">
+                    <h5 class="card-title">Birdwatching Special</h5>
+                    <p class="card-text">A half-day session dedicated to photographing various species of birds in their natural habitat. 15 high-resolution images included.</p>
+                    <p class="card-text"><strong>Price: $400</strong></p>
+                    <a href="#contact" class="btn btn-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Booking Information Section -->
+<div class="container my-5" id="contact">
+    <h3>How to Book a Session</h3>
+    <p class="lead">Booking a photography session is easy! Just follow these simple steps:</p>
+    <ul>
+        <li>1. Choose your desired package from the options above.</li>
+        <li>2. Contact me via email or social media to confirm your session.</li>
+        <li>3. We’ll schedule a date and location for your shoot.</li>
+        <li>4. Sit back, relax, and let me capture beautiful moments for you!</li>
+    </ul>
+    <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Contact Me</a>
+</div>
+
+{% endblock %}
